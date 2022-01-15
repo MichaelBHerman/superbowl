@@ -91,9 +91,10 @@ switch (afcTeam) {
             
     <div class="left">
     <h3>AFC: ({afcTeam})</h3>
+    <img src={timage}/>
     <h3>NFC: ({nfcTeam})</h3>
       <img src={image}/>
-      <img src={timage}/>
+      
        
 
         
