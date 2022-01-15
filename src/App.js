@@ -14,6 +14,8 @@ import bills from './Images/bills.png';
 import steelers from './Images/steelers.png';
 import titans from './Images/titans.png';
 import chiefs from './Images/chiefs.png';
+import sample from './Images/football1.mp4';
+import './index.css';
 
 
 
@@ -80,6 +82,9 @@ switch (afcTeam) {
   return (
     <div>
       {/* <SuperbowlPicker /> */}
+      <video id='background-video' autoPlay loop muted>
+      <source src={sample} type='video/mp4'/>
+      </video>
       <h1>2022 SuperBowl Prediction:</h1>
             <h3>AFC: ({afcTeam})</h3>
             <h3>NFC: ({nfcTeam})</h3>
