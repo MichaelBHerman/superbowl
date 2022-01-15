@@ -16,6 +16,7 @@ import titans from './Images/titans.png';
 import chiefs from './Images/chiefs.png';
 import sample from './Images/football1.mp4';
 import './index.css';
+import MatchupBox from "./Components/MatchupBox";
 
 
 
@@ -23,73 +24,73 @@ import './index.css';
 
 
 function App() {
-let items = ["49ers", "Cowboys", "Eagles", "Buccaneers", "Packers", "Cardinals", "Rams"]
-let nfcTeam = items[Math.floor(Math.random()*items.length)];
+// let items = ["49ers", "Cowboys", "Eagles", "Buccaneers", "Packers", "Cardinals", "Rams"]
+// let nfcTeam = items[Math.floor(Math.random()*items.length)];
 
-let item = ["Raiders", "Bengals", "Steelers", "Chiefs", "Patriots", "Bills", "Titans"]
-let afcTeam = item[Math.floor(Math.random()*item.length)];
+// let item = ["Raiders", "Bengals", "Steelers", "Chiefs", "Patriots", "Bills", "Titans"]
+// let afcTeam = item[Math.floor(Math.random()*item.length)];
 
-let image;
+// let image;
 
-switch (nfcTeam) {
-    case '49ers':
-        image = niners
-        break;
-    case 'Cowboys':
-        image = cowboys
-        break;
-    case 'Eagles':
-        image = eagles
-        break;   
-    case 'Packers':
-        image = packers
-        break;
-    case 'Buccaneers':
-        image = buccs
-        break;
-    case 'Cardinals':
-        image = cards
-        break;
-    case 'Rams':
-        image = rams
-        break;    
-}
-let timage;
+// switch (nfcTeam) {
+//     case '49ers':
+//         image = niners
+//         break;
+//     case 'Cowboys':
+//         image = cowboys
+//         break;
+//     case 'Eagles':
+//         image = eagles
+//         break;   
+//     case 'Packers':
+//         image = packers
+//         break;
+//     case 'Buccaneers':
+//         image = buccs
+//         break;
+//     case 'Cardinals':
+//         image = cards
+//         break;
+//     case 'Rams':
+//         image = rams
+//         break;    
+// }
+// let timage;
 
-switch (afcTeam) {
-  case 'Raiders':
-      timage = raiders
-      break;
-  case 'Bengals':
-      timage = bengals
-      break;
-  case 'Patriots':
-      timage = patriots
-      break;   
-  case 'Bills':
-      timage = bills
-      break;
-  case 'Steelers':
-      timage = steelers
-      break;
-  case 'Chiefs':
-      timage = chiefs
-      break;
-  case 'Titans':
-      timage = titans
-      break;    
-}
+// switch (afcTeam) {
+//   case 'Raiders':
+//       timage = raiders
+//       break;
+//   case 'Bengals':
+//       timage = bengals
+//       break;
+//   case 'Patriots':
+//       timage = patriots
+//       break;   
+//   case 'Bills':
+//       timage = bills
+//       break;
+//   case 'Steelers':
+//       timage = steelers
+//       break;
+//   case 'Chiefs':
+//       timage = chiefs
+//       break;
+//   case 'Titans':
+//       timage = titans
+//       break;    
+// }
   return (
     <div>
-      {/* <SuperbowlPicker /> */}
+      <MatchupBox />
       <video id='background-video' autoPlay loop muted>
       <source src={sample} type='video/mp4'/>
       </video>
-      <h1>2022 SuperBowl Prediction:</h1>
+      {/* <h1>2022 SuperBowl Prediction:</h1>
             <h3>AFC: ({afcTeam})</h3>
             <h3>NFC: ({nfcTeam})</h3>
       <img src={image}/>
-      <img src={timage}/>
+      <img src={timage}/> */}
     </div>
   );
 }
