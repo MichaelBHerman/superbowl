@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+h5 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 /* *{
   margin: 0;

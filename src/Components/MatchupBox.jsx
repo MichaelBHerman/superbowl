@@ -27,6 +27,8 @@ import '../index.css';
 
 
 function MatchupBox (props) {
+    
+
 let items = ["49ers", "Cowboys", "Eagles", "Buccaneers", "Packers", "Cardinals", "Rams"]
 let nfcTeam = items[Math.floor(Math.random()*items.length)];
 
@@ -61,62 +63,10 @@ switch (nfcTeam) {
 let mvp;
 
 
-switch (nfcTeam) {
-    
-    case '49ers':
-        let players = ["Deebo Samuel", "Fred Warner", "Nick Bosa", "Elijah Mitchell", "Jimmy Garoppolo", "George Kittle", "Brandon Aiyuk"]
-        mvp = players[Math.floor(Math.random()*items.length)];
-        break;
-    case 'Cowboys':
-        let players1 = ["Dak Prescott", "Ezekiel Elliott", "Trevon Diggs", "Micah Parsons", "CeeDee Lamb", "Amari Cooper"]
-        mvp = players1[Math.floor(Math.random()*items.length)];
-        break;
-    case 'Eagles':
-        let players2 =["Jalen Hurts", "DeVonta Smith", "Jordan Howard", "Jalen Reagor", "Miles Sanders"]
-        mvp = players2[Math.floor(Math.random()*items.length)];
-        break;   
-    case 'Packers':
-        let players3 =["Aaron Rodgers", "Devonte Adams", "Aaron Jones", "Randall Cobb", "Mason Crosby"]
-        mvp = players3[Math.floor(Math.random()*items.length)];
-        break;
-    case 'Buccaneers':
-        let players4 =["Tom Brady", "Rob Gronkowski", "Leonard Fournette", "Mike Evans", "Scott Miller"]
-        mvp = players4[Math.floor(Math.random()*items.length)];
-        break;
-    case 'Cardinals':
-        let players5 =["Kyler Murray", "J.J. Watt", "James Conner", "A.J. Green", "Chandler Jones", "Christian Kirk"]
-        mvp = players5[Math.floor(Math.random()*items.length)];
-        break;
-    case 'Rams':
-        let players6 =["Matthew Stafford", "Odell Beckham Jr.", "Von Miller", "Cooper Kupp", "Aaron Donald", "Jalen Ramsey"]
-        mvp = players6[Math.floor(Math.random()*items.length)];
-        break;    
-}
+
 let mvp1;
 
-switch (afcTeam) {
-  case 'Raiders':
-      mvp1 = "Dereck Carr"
-      break;
-  case 'Bengals':
-      mvp1 = bengals
-      break;
-  case 'Patriots':
-      mvp1 = patriots
-      break;   
-  case 'Bills':
-      mvp1 = bills
-      break;
-  case 'Steelers':
-      mvp1 = steelers
-      break;
-  case 'Chiefs':
-      mvp1 = chiefs
-      break;
-  case 'Titans':
-      mvp1 = titans
-      break;    
-}
+
 let timage;
 
 switch (afcTeam) {
@@ -142,6 +92,82 @@ switch (afcTeam) {
         timage = titans
         break;    
   }
+  function getScore(max) {
+    return Math.floor(Math.random() * max);
+}
+    let nfcScore = 0;
+    let afcScore = 0;
+    nfcScore = getScore(55);
+        console.log(nfcScore);
+    afcScore = getScore(55);
+        console.log(afcScore);
+  
+
+  if(nfcScore > afcScore){
+    switch (nfcTeam) {
+    
+        case '49ers':
+            let players = ["Deebo Samuel", "Fred Warner", "Nick Bosa", "Elijah Mitchell", "Jimmy Garoppolo", "George Kittle", "Brandon Aiyuk"]
+            mvp = players[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Cowboys':
+            let players1 = ["Dak Prescott", "Ezekiel Elliott", "Trevon Diggs", "Micah Parsons", "CeeDee Lamb", "Amari Cooper"]
+            mvp = players1[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Eagles':
+            let players2 =["Jalen Hurts", "DeVonta Smith", "Jordan Howard", "Jalen Reagor", "Miles Sanders"]
+            mvp = players2[Math.floor(Math.random()*items.length)];
+            break;   
+        case 'Packers':
+            let players3 =["Aaron Rodgers", "Devonte Adams", "Aaron Jones", "Randall Cobb", "Mason Crosby"]
+            mvp = players3[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Buccaneers':
+            let players4 =["Tom Brady", "Rob Gronkowski", "Leonard Fournette", "Mike Evans", "Scott Miller"]
+            mvp = players4[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Cardinals':
+            let players5 =["Kyler Murray", "J.J. Watt", "James Conner", "A.J. Green", "Chandler Jones", "Christian Kirk"]
+            mvp = players5[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Rams':
+            let players6 =["Matthew Stafford", "Odell Beckham Jr.", "Von Miller", "Cooper Kupp", "Aaron Donald", "Jalen Ramsey"]
+            mvp = players6[Math.floor(Math.random()*items.length)];
+            break;    
+    }
+  }
+  else{
+    switch (afcTeam) {
+        case 'Raiders':
+            let players7 =["Derek Carr", "Josh Jacobs", "DeSean Jackson", "Hunter Renfrow", "Denzel Perryman", "Darren Waller"]
+            mvp1 = players7[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Bengals':
+            let players8 = ["Joe Burrow", "Joe Mixon", "Ja'Marr Chase", "Tee Higgins", "Trey Hendrickson"]
+            mvp1 = players8[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Patriots':
+            let players9 = ["Mac Jones", "Damien Harris", "Jakobi Meyers", "Hunter Henry", "Matthew Judon"]
+            mvp1 = players9[Math.floor(Math.random()*items.length)];
+            break;   
+        case 'Bills':
+            let players10 = ["Josh Allen", "Devin Singletary", "Stefon Diggs", "Tremaine Edmunds", "Micah Hyde"]
+            mvp1 = players10[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Steelers':
+            let players11 = ["Ben Roethlisberger", "Najee Harris", "Diontae Johnson", "Minkah Fitzpatrick", "T.J. Watt"]
+            mvp1 = players11[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Chiefs':
+            let players12 =["Patrick Mahomes", "Tyreek Hill", "Clyde Edwards-Helaire", "Travis Kelce", "Tyrann Mathieu"]
+            mvp1 = players12[Math.floor(Math.random()*items.length)];
+            break;
+        case 'Titans':
+            let players13 =["Ryan Tannehill", "Derrick Henry", "Harold Landry III", "A.J. Brown"]
+            mvp1 = players13[Math.floor(Math.random()*items.length)];
+            break;    
+      }
+  }
     return(
         <div>
 
@@ -151,8 +177,11 @@ switch (afcTeam) {
     <div class="left">
     <h3>AFC: ({afcTeam})</h3>
     <img src={timage}/>
+    {/* <h5>({afcScore})</h5> */}
+
     <h3>NFC: ({nfcTeam})</h3>
       <img src={image}/>
+     {/* <h5>({nfcScore})</h5>  */}
       
        
 
@@ -162,16 +191,18 @@ switch (afcTeam) {
     <div class="right">
         <div class="info">
             <h3>2022 SuperBowl Prediction</h3>
-            {/* <h4>Score:</h4> */}
+            <h5>{afcTeam}: {afcScore}</h5>
+            <h5>{nfcTeam}: {nfcScore}</h5>
+            
             <div class="info_data">
                  <div class="data">
-                    <h4>AFC Team Stats</h4>
+                    {/* <h4>AFC Team Stats</h4> */}
                    
                 
             
                  </div>
                  <div class="data">
-                   <h4>NFC Team Stats</h4>
+                   {/* <h4>NFC Team Stats</h4> */}
                  
               
               </div>
