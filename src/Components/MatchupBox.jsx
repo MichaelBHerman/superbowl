@@ -58,31 +58,90 @@ switch (nfcTeam) {
         image = rams
         break;    
 }
-let timage;
+let mvp;
+
+
+switch (nfcTeam) {
+    
+    case '49ers':
+        let players = ["Deebo Samuel", "Fred Warner", "Nick Bosa", "Elijah Mitchell", "Jimmy Garoppolo", "George Kittle", "Brandon Aiyuk"]
+        mvp = players[Math.floor(Math.random()*items.length)];
+        break;
+    case 'Cowboys':
+        let players1 = ["Dak Prescott", "Ezekiel Elliott", "Trevon Diggs", "Micah Parsons", "CeeDee Lamb", "Amari Cooper"]
+        mvp = players1[Math.floor(Math.random()*items.length)];
+        break;
+    case 'Eagles':
+        let players2 =["Jalen Hurts", "DeVonta Smith", "Jordan Howard", "Jalen Reagor", "Miles Sanders"]
+        mvp = players2[Math.floor(Math.random()*items.length)];
+        break;   
+    case 'Packers':
+        let players3 =["Aaron Rodgers", "Devonte Adams", "Aaron Jones", "Randall Cobb", "Mason Crosby"]
+        mvp = players3[Math.floor(Math.random()*items.length)];
+        break;
+    case 'Buccaneers':
+        let players4 =["Tom Brady", "Rob Gronkowski", "Leonard Fournette", "Mike Evans", "Scott Miller"]
+        mvp = players4[Math.floor(Math.random()*items.length)];
+        break;
+    case 'Cardinals':
+        let players5 =["Kyler Murray", "J.J. Watt", "James Conner", "A.J. Green", "Chandler Jones", "Christian Kirk"]
+        mvp = players5[Math.floor(Math.random()*items.length)];
+        break;
+    case 'Rams':
+        let players6 =["Matthew Stafford", "Odell Beckham Jr.", "Von Miller", "Cooper Kupp", "Aaron Donald", "Jalen Ramsey"]
+        mvp = players6[Math.floor(Math.random()*items.length)];
+        break;    
+}
+let mvp1;
 
 switch (afcTeam) {
   case 'Raiders':
-      timage = raiders
+      mvp1 = "Dereck Carr"
       break;
   case 'Bengals':
-      timage = bengals
+      mvp1 = bengals
       break;
   case 'Patriots':
-      timage = patriots
+      mvp1 = patriots
       break;   
   case 'Bills':
-      timage = bills
+      mvp1 = bills
       break;
   case 'Steelers':
-      timage = steelers
+      mvp1 = steelers
       break;
   case 'Chiefs':
-      timage = chiefs
+      mvp1 = chiefs
       break;
   case 'Titans':
-      timage = titans
+      mvp1 = titans
       break;    
 }
+let timage;
+
+switch (afcTeam) {
+    case 'Raiders':
+        timage = raiders
+        break;
+    case 'Bengals':
+        timage = bengals
+        break;
+    case 'Patriots':
+        timage = patriots
+        break;   
+    case 'Bills':
+        timage = bills
+        break;
+    case 'Steelers':
+        timage = steelers
+        break;
+    case 'Chiefs':
+        timage = chiefs
+        break;
+    case 'Titans':
+        timage = titans
+        break;    
+  }
     return(
         <div>
 
@@ -103,7 +162,7 @@ switch (afcTeam) {
     <div class="right">
         <div class="info">
             <h3>2022 SuperBowl Prediction</h3>
-            <h4>Score:</h4>
+            {/* <h4>Score:</h4> */}
             <div class="info_data">
                  <div class="data">
                     <h4>AFC Team Stats</h4>
@@ -122,6 +181,7 @@ switch (afcTeam) {
       <div class="projects">
             <h3>SuperBowl MVP</h3>
             <div class="projects_data">
+                <h2>{mvp}</h2>
                  <div class="data">
                 </div>
               
