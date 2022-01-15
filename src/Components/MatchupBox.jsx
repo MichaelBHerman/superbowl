@@ -130,7 +130,7 @@ switch (afcTeam) {
             break;    
     }
   }
-  else if (afcScore > nfcScore) {
+  else {
     switch (afcTeam) {
         case 'Raiders':
             let players7 =["Derek Carr", "Josh Jacobs", "DeSean Jackson", "Hunter Renfrow", "Denzel Perryman", "Darren Waller"]
